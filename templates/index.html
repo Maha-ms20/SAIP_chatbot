@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">   <meta charset="UTF-8">
+    <title>SAIP Chatbot</title>
+</head>
+<header>
+    <button onclick="changeMode()">تغيير الالوان</button>
+    <img src="https://res.cloudinary.com/hz8vycrfk/image/upload/v1638376806/logo_e4f1i1.png" alt="SAIP Chatbot" style="width:7%">
+    <h>SAIP Chatbot</h>
+</header>
+<body onload="start()">
+
+ <ul class="uppernav">
+    <li>اتصل بنا </li>
+     <li>بوابة التوظيف </li>
+      <li> المركز الإعلامي </li>
+      <li>الأنظمة واللوائح </li>
+      <li>الخدمات</li>
+     <li><a href="index.html">الصفحة الرئيسية</a></li>
+        </ul>
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="https://res.cloudinary.com/hz8vycrfk/image/upload/v1638376818/pic1_jqtxes.png" style="width:60%">
+    <div class="text">تملك علامتك</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="https://res.cloudinary.com/hz8vycrfk/image/upload/v1638376826/pic2_xgweme.png" style="width:60%">
+    <div class="text">حافظ على حقوقك</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="https://res.cloudinary.com/hz8vycrfk/image/upload/v1638376832/pic3_brohet.png" style="width:60% ">
+    <div class="text">وثق براءة اختراعك</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "104745498722184");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v12.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/ar_AR/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+<!--
+<input type="image" src="https://res.cloudinary.com/hz8vycrfk/image/upload/v1638376723/chat_qzoz69.png" style="width:6.5%" class="open-button" id="b" onclick="openChat()">
+-->
+
+</body>
+
+<footer>                2021 &copy; SAIP Chatbot  جميع الحقوق محفوظة
+</footer>
+</html>
+
+
+
+<style>
+
+html{
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+            }
+body{
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+background-color:#2591A8;
+}
+
+h{
+color: white;
+text-align: left;
+font-size: 35px;
+bottom: 45px;
+left: 20px;
+position:relative;
+}
+header{
+text-align: left;
+}
+
+.uppernav {
+border-color: #3DA8A8;
+background-color: #50BABA;
+height: auto;
+border-style: solid;
+border: 90%;
+padding: 1.5%;
+margin: 1%;
+}
+
+.uppernav > li {
+	display: inline-block;
+	margin-left: 4em;
+	margin-right: 4em;
+}
+
+.uppernav > li:before {
+	content: "\200B"; /* 1 */
+	position: absolute; /* 2 */
+}
+
+a{
+color: #FF4040;
+text-decoration: none;
+}
+
+
+li{
+color: white;
+}
+
+.open-button{
+float: right;
+margin-right:2em;
+border: 2px solid #555;
+background: #D8D5D5;
+border-radius: 100px;
+}
+
+header{
+padding: 1%;
+margin: 0%;
+}
+
+button{
+margin-left: 90%;
+}
+
+/* dark mode */
+.dark-mode {
+  background-color: #4b5c5a;
+}
+
+.dark-mode .uppernav{
+background-color: #0c70b3;
+border-color: black;
+}
+
+.dark-mode .open-button{
+background-color: #0c70b3;
+border: 2px solid #d9e7fc;
+}
+
+.dark-mode footer {
+border-color: black;
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 40px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+footer{
+border-top-style:solid;
+border-color: #3DA8A8;
+color: white;
+text-align: center;
+padding: 1%;
+margin: 7%;
+}
+
+
+</style>
+
+<script>
+
+function openChat(){
+window.open('https://www.messenger.com/t/104745498722184');
+}
+
+function changeMode() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+    var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
